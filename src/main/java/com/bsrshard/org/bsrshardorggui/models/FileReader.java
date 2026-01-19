@@ -124,8 +124,6 @@ public final class FileReader {
     }
 
 
-
-
     public void readShardData(final Stage stage){
         FileChooser fc = new FileChooser();
 

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bsrshard.org.bsrshardorggui.controllers.ViewController">
+  <tabs>
+      <Tab text="Untitled Tab 1">
+          <content>
+              <BorderPane prefHeight="800.0" prefWidth="800.0">
+                  <center>
+                      <TreeTableView fx:id="treeTableView" maxHeight="450.0" prefHeight="450.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <columns>
+                              <!-- Shard Stats Header -->
+                              <TreeTableColumn text="Shard Stats">
+                                  <columns>
+                                      <TreeTableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                                      <TreeTableColumn fx:id="hpColumn" prefWidth="75.0" text="HP" />
+                                      <TreeTableColumn fx:id="defColumn" prefWidth="75.0" text="DEF" />
+                                      <TreeTableColumn fx:id="attackColumn" prefWidth="75.0" text="ATK" />
+                                      <TreeTableColumn fx:id="critRateColumn" prefWidth="75.0" text="Crit Rate" />
+                                      <TreeTableColumn fx:id="critDmgColumn" prefWidth="75.0" text="Crit DMG" />
+                                      <TreeTableColumn fx:id="ailmentDmgColumn" prefWidth="75.0" text="Ailment DMG Bonus" />
+                                      <TreeTableColumn fx:id="slashDmgColumn" prefWidth="75.0" text="Slash DMG Bonus" />
+                                      <TreeTableColumn fx:id="strikeDmgColumn" prefWidth="75.0" text="Strike DMG Bonus" />
+                                      <TreeTableColumn fx:id="thrustDmgColumn" prefWidth="75.0" text="Thrust DMG Bonus" />
+                                      <TreeTableColumn fx:id="spiritDmgColumn" prefWidth="75.0" text="Spirit DMG Bonus" />
+                                      <TreeTableColumn fx:id="ultimateCRateColumn" prefWidth="75.0" text="Ultimate Charge Rate" />
+
+                                  </columns>
+                              </TreeTableColumn>
+
+
+                          </columns>
+                      </TreeTableView>
+                  </center>
+                  <top>
+                      <HBox spacing="30.0">
+                          <VBox spacing="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+                              <!-- Dropdown menu -->
+                              <ComboBox fx:id="dropdownMenu" prefWidth="200.0" />
+
+
+                              <!-- Image view -->
+                              <ImageView fx:id="imageView" fitHeight="200.0" fitWidth="200.0" preserveRatio="true">
+
+                              </ImageView>
+                          </VBox>
+                          <VBox>
+                              <Label text="Basic Stats Level 90" />
+                              <Label fx:id="hpLabel" />
+                              <Label fx:id="atkLabel" />
+                              <Label fx:id="defLabel" />
+
+                              <Label fx:id="critRateLabel" />
+                              <Label fx:id="critDmgLabel" />
+                              <Label fx:id="healingEffectLabel" />
+                              <Label fx:id="healedEffectLabel" />
+                              <Label fx:id="cooldownRedLabel" />
+                              <Label fx:id="dissipationDmgLabel" />
+                              <Label fx:id="ultimateChargeLabel" />
+                              <Label fx:id="basicAtkDmgLabel" />
+                              <Label fx:id="techniqueDmgLabel" />
+                          </VBox>
+
+                          <VBox>
+
+                          </VBox>
+
+                          <VBox>
+                              <Label fx:id="ultimateDmgLabel" />
+                              <Label fx:id="specialAtkDmgLabel" />
+                              <Label fx:id="battlefieldDmgLabel" />
+                              <Label fx:id="slashDmgLabel" />
+                              <Label fx:id="strikeDmgLabel" />
+                              <Label fx:id="thrustDmgLabel" />
+                              <Label fx:id="spiritDmgLabel" />
+                              <Label fx:id="ailmentDmgLabel" />
+                          </VBox>
+                          <VBox>
+
+                          </VBox>
+
+                          <VBox prefHeight="235.0" prefWidth="344.0" alignment="BOTTOM_RIGHT">
+                              <ComboBox />
+                              <ComboBox />
+                              <ComboBox />
+                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Search"  />
+                          </VBox>
+                      </HBox>
+
+                  </top>
+
+              </BorderPane>
+          </content>
+      </Tab>
+      <Tab text="Import Tab">
+          <BorderPane>
+            <center>
+               <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                  <children>
+                     <Button mnemonicParsing="false" onAction="#importFileDialog" text="Import Shards" />
+                  </children>
+               </VBox>
+            </center>
+          </BorderPane>
+      </Tab>
+  </tabs>
+</TabPane>

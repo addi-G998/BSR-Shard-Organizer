@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -130,6 +131,7 @@ public final class FileReader {
 
         List<File> files = new ArrayList<>(fc.showOpenMultipleDialog(stage));
         // Path to your image
+
 
         // Create Tesseract instance
         Tesseract tesseract = new Tesseract();

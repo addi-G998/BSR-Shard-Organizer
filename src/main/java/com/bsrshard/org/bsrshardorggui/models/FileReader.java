@@ -128,8 +128,6 @@ public final class FileReader {
         FileChooser fc = new FileChooser();
 
         List<File> files = new ArrayList<>(fc.showOpenMultipleDialog(stage));
-        // Path to your image
-
 
         // Create Tesseract instance
         Tesseract tesseract = new Tesseract();

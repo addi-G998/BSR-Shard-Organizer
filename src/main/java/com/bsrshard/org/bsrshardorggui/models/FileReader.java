@@ -127,6 +127,9 @@ public final class FileReader {
     public void readShardData(final Stage stage){
         FileChooser fc = new FileChooser();
 
+        if(fc.showOpenMultipleDialog(stage) == null){
+            return;
+        }
         List<File> files = new ArrayList<>(fc.showOpenMultipleDialog(stage));
 
         // Create Tesseract instance

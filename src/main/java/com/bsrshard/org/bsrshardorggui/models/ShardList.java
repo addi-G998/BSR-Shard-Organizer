@@ -3,6 +3,7 @@ package com.bsrshard.org.bsrshardorggui.models;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ShardList {
@@ -24,4 +25,18 @@ public class ShardList {
     public static void genShardCombination(){
 
     }
+
+    private static void genSets(int start, int n, int k, int depth,int[] buffer){
+
+        if(depth == k){
+            System.out.println(Arrays.toString(buffer));
+            return;
+        }
+
+        for(int i = start; i < n - (k + depth) + 1; i++){
+            buffer[depth] = i;
+            genSets(i + 1, n,k,depth + 1,buffer);
+        }
+    }
+
 }

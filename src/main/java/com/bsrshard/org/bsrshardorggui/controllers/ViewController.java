@@ -176,6 +176,11 @@ public class ViewController {
         setDefault();
         treeTableView.setColumnResizePolicy(TreeTableView.CONSTRAINED_RESIZE_POLICY);
 
+        ShardList.addShard(new Shard("Warrior", 500, 10.0, 100, 5.0, 50, 10.0, 5.0, 10.0, 2.0, 3.0, 4.0, 1.0, 2.0, 5.0));
+        ShardList.addShard(new Shard("Mage", 300, 8.0, 60, 3.0, 70, 15.0, 10.0, 20.0, 5.0, 6.0, 7.0, 2.0, 3.0, 8.0));
+        ShardList.addShard(new Shard("Rogue", 400, 12.0, 80, 4.0, 60, 12.0, 15.0, 25.0, 3.0, 4.0, 5.0, 2.0, 4.0, 6.0));
+        ShardList.addShard(new Shard("Paladin", 600, 15.0, 120, 6.0, 40, 8.0, 5.0, 10.0, 1.0, 2.0, 3.0, 1.0, 1.0, 4.0));
+        ShardList.addShard(new Shard("Hunter", 350, 9.0, 70, 3.5, 55, 11.0, 8.0, 18.0, 2.0, 3.0, 4.0, 1.0, 2.0, 7.0));
         //setCellFactoryValue(ShardList.getShardList().getFirst());
 
         dropdownMenu.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {

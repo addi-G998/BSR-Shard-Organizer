@@ -23,10 +23,12 @@ public class ShardList {
     }
 
     public static void genShardCombination(){
-
+        Shard[] buffer = new Shard[shardList.size()];
+        buffer = shardList.toArray(buffer); // Fills the array
+        genSets(0,getShardList().size(),0,0, buffer);
     }
 
-    private static void genSets(int start, int n, int k, int depth,int[] buffer){
+    private static void genSets(int start, int n, int k, int depth,Shard[] buffer){
 
         if(depth == k){
             System.out.println(Arrays.toString(buffer));
@@ -34,7 +36,7 @@ public class ShardList {
         }
 
         for(int i = start; i < n - (k + depth) + 1; i++){
-            buffer[depth] = i;
+            buffer[depth] = getShardList().get(i);
             genSets(i + 1, n,k,depth + 1,buffer);
         }
     }

@@ -82,11 +82,8 @@
 
                           </VBox>
 
-                          <VBox prefHeight="235.0" prefWidth="344.0" alignment="BOTTOM_RIGHT">
-                              <ComboBox />
-                              <ComboBox />
-                              <ComboBox />
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" text="Search"  />
+                          <VBox alignment="BOTTOM_RIGHT" prefHeight="235.0" prefWidth="344.0">
+                              <Button mnemonicParsing="false" onAction="#setCellFactoryValue" prefHeight="25.0" prefWidth="86.0" text="Search" />
                           </VBox>
                       </HBox>
 

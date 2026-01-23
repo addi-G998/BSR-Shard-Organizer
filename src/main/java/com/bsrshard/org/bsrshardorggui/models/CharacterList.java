@@ -18,4 +18,6 @@ public class CharacterList {
     public static void addCharacter(BleachCharacter bleachCharacter){
         bleachCharacterList.add(bleachCharacter);
     }
+
+
 }

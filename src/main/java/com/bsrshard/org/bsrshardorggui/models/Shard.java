@@ -1,7 +1,6 @@
 package com.bsrshard.org.bsrshardorggui.models;
 
 
-
 public class Shard {
 
     private String gearSet;

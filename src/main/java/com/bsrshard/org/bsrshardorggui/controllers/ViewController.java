@@ -11,27 +11,26 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.util.Objects;
-import java.util.Stack;
 
 public class ViewController {
 
 
 
 
-    @FXML private TreeTableView<Shard> treeTableView;
+    @FXML private TreeTableView<BleachCharacter> treeTableView;
 
     @FXML private TreeTableColumn<Integer,Integer> idColumn;
-    @FXML private TreeTableColumn<Shard, Integer> hpColumn;
-    @FXML private TreeTableColumn<Shard, Integer> defColumn;
-    @FXML private TreeTableColumn<Shard, Integer> attackColumn;
-    @FXML private TreeTableColumn<Shard, Double> critRateColumn;
-    @FXML private TreeTableColumn<Shard, Double> critDmgColumn;
-    @FXML private TreeTableColumn<Shard, Double> ailmentDmgColumn;
-    @FXML private TreeTableColumn<Shard, Double> slashDmgColumn;
-    @FXML private TreeTableColumn<Shard, Double> strikeDmgColumn;
-    @FXML private TreeTableColumn<Shard, Double> thrustDmgColumn;
-    @FXML private TreeTableColumn<Shard, Double> spiritDmgColumn;
-    @FXML private TreeTableColumn<Shard, Double> ultimateCRateColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Integer> hpColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Integer> defColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Integer> attackColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Double> critRateColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Double> critDmgColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Double> ailmentDmgColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Double> slashDmgColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Double> strikeDmgColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Double> thrustDmgColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Double> spiritDmgColumn;
+    @FXML private TreeTableColumn<BleachCharacter, Double> ultimateCRateColumn;
 
 
 
@@ -100,6 +99,8 @@ public class ViewController {
         thrustDmgLabel.setText("Thrust Damage: " + bc.getThrustDmg());
         spiritDmgLabel.setText("Spirit Damage: " + bc.getSpritDmg());
         ailmentDmgLabel.setText("Ailment Damage: " + bc.getAilmentDmg());
+
+        BleachCharacter.setUnit(bc);
     }
 
     private void setDefault(){
@@ -128,15 +129,15 @@ public class ViewController {
         );
 
         hpColumn.setCellValueFactory(p ->
-                new ReadOnlyObjectWrapper<>(p.getValue().getValue().getFlatHP())
+                new ReadOnlyObjectWrapper<>(p.getValue().getValue().getHp())
         );
 
         defColumn.setCellValueFactory(p ->
-                new ReadOnlyObjectWrapper<>(p.getValue().getValue().getFlatDef())
+                new ReadOnlyObjectWrapper<>(p.getValue().getValue().getDef())
         );
 
         attackColumn.setCellValueFactory(p ->
-                new ReadOnlyObjectWrapper<>(p.getValue().getValue().getFlatAttack())
+                new ReadOnlyObjectWrapper<>(p.getValue().getValue().getAtk())
         );
 
 
@@ -169,7 +170,7 @@ public class ViewController {
         );
 
         ultimateCRateColumn.setCellValueFactory(p ->
-                new ReadOnlyObjectWrapper<>(p.getValue().getValue().getUltimateCRate())
+                new ReadOnlyObjectWrapper<>(p.getValue().getValue().getUltimateCharge())
         );
 
         buildTree();
@@ -177,11 +178,12 @@ public class ViewController {
 
     private void buildTree() {
         // 1. Create a dummy root
-        TreeItem<Shard> rootItem = new TreeItem<>(new Shard());
+        TreeItem<BleachCharacter> rootItem = new TreeItem<>(new BleachCharacter());
+        CalculatedStats calculatedStats = new CalculatedStats();
 
         // 2. Add your shards (Example: from a list or database)
-        for (Shard shard : ShardList.getShardList()) {
-            rootItem.getChildren().add(new TreeItem<>(shard));
+        for (ShardSet set : ShardSetList.getSetList()) {
+            rootItem.getChildren().add(new TreeItem<>(calculatedStats.statDummy(set)));
         }
 
         // 3. Set the root and hide it

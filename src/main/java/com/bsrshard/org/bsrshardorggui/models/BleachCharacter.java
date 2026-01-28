@@ -26,6 +26,9 @@ public class BleachCharacter {
     private double spritDmg;
     private double ailmentDmg;
 
+
+    private static BleachCharacter unit;
+
     public BleachCharacter(String name, int hp, int atk, int def, double critRate, double critDmg, double healingEffect, double healedEffect, double cooldownRed, double dissipationDmg, double ultimateCharge, double basicAtkDmg, double techniqueDmg, double ultimateDmg, double specialAtkDmg, double battlefieldDmg, double slashDmg, double strikeDmg, double thrustDmg, double spritDmg, double ailmentDmg) {
         this.name = name;
         // Basic Stats
@@ -51,6 +54,8 @@ public class BleachCharacter {
         this.spritDmg = spritDmg;
         this.ailmentDmg = ailmentDmg;
     }
+
+    public BleachCharacter(){}
 
     public String getName() {
         return name;
@@ -218,5 +223,13 @@ public class BleachCharacter {
 
     public void setAilmentDmg(double ailmentDmg) {
         this.ailmentDmg = ailmentDmg;
+    }
+
+    public static BleachCharacter getUnit() {
+        return unit;
+    }
+
+    public static void setUnit(BleachCharacter unit) {
+        BleachCharacter.unit = unit;
     }
 }

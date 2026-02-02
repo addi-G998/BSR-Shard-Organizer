@@ -8,13 +8,13 @@
   <tabs>
       <Tab text="Untitled Tab 1">
           <content>
-              <BorderPane prefHeight="800.0" prefWidth="800.0">
+              <BorderPane style="-fx-background-color: #2b2b2b" prefHeight="800.0" prefWidth="800.0">
                   <center>
-                      <TreeTableView fx:id="treeTableView" maxHeight="450.0" prefHeight="450.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                      <TreeTableView style="-fx-background-color: #2b2b2b" fx:id="treeTableView" maxHeight="450.0" prefHeight="450.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                           <columns>
                               <!-- Shard Stats Header -->
                               <TreeTableColumn text="Shard Stats">
-                                  <columns>
+                                  <columns >
                                       <TreeTableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
                                       <TreeTableColumn fx:id="hpColumn" prefWidth="75.0" text="HP" />
                                       <TreeTableColumn fx:id="defColumn" prefWidth="75.0" text="DEF" />
@@ -47,36 +47,36 @@
 
                               </ImageView>
                           </VBox>
-                          <VBox>
-                              <Label text="Basic Stats Level 90" />
-                              <Label fx:id="hpLabel" />
-                              <Label fx:id="atkLabel" />
-                              <Label fx:id="defLabel" />
+                          <VBox style="-fx-text-fill: white;">
+                              <Label text="Basic Stats Level 90" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="hpLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="atkLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="defLabel" style="-fx-text-fill: inherit;"/>
 
-                              <Label fx:id="critRateLabel" />
-                              <Label fx:id="critDmgLabel" />
-                              <Label fx:id="healingEffectLabel" />
-                              <Label fx:id="healedEffectLabel" />
-                              <Label fx:id="cooldownRedLabel" />
-                              <Label fx:id="dissipationDmgLabel" />
-                              <Label fx:id="ultimateChargeLabel" />
-                              <Label fx:id="basicAtkDmgLabel" />
-                              <Label fx:id="techniqueDmgLabel" />
+                              <Label fx:id="critRateLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="critDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="healingEffectLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="healedEffectLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="cooldownRedLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="dissipationDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="ultimateChargeLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="basicAtkDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="techniqueDmgLabel" style="-fx-text-fill: inherit;"/>
                           </VBox>
 
                           <VBox>
 
                           </VBox>
 
-                          <VBox>
-                              <Label fx:id="ultimateDmgLabel" />
-                              <Label fx:id="specialAtkDmgLabel" />
-                              <Label fx:id="battlefieldDmgLabel" />
-                              <Label fx:id="slashDmgLabel" />
-                              <Label fx:id="strikeDmgLabel" />
-                              <Label fx:id="thrustDmgLabel" />
-                              <Label fx:id="spiritDmgLabel" />
-                              <Label fx:id="ailmentDmgLabel" />
+                          <VBox style="-fx-text-fill: white;">
+                              <Label fx:id="ultimateDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="specialAtkDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="battlefieldDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="slashDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="strikeDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="thrustDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="spiritDmgLabel" style="-fx-text-fill: inherit;"/>
+                              <Label fx:id="ailmentDmgLabel" style="-fx-text-fill: inherit;"/>
                           </VBox>
                           <VBox>
 
